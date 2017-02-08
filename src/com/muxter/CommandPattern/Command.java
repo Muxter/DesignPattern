@@ -5,4 +5,6 @@ package com.muxter.CommandPattern;
  */
 public interface Command {
     void execute();
+
+    void undo();
 }

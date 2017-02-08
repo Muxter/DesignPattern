@@ -5,15 +5,18 @@ package com.muxter.CommandPattern;
  */
 public class Main {
     public static void main(String[] args) {
-        RemoteControl remoteControl = new RemoteControl();
-        Light light = new Light();
-        LightOnCommand lightOnCommand = new LightOnCommand(light);
-        LightOffCommand lightOffCommand = new LightOffCommand(light);
+        RemoteControl control = new RemoteControl();
+        CeilingFan fan = new CeilingFan();
+        CeilingFanHighCommand highCommand = new CeilingFanHighCommand(fan);
+        CeilingFanMediumCommand mediumCommand = new CeilingFanMediumCommand(fan);
+        CeilingFanLowCommand lowCommand = new CeilingFanLowCommand(fan);
+        CeilingFanOffCommand offCommand = new CeilingFanOffCommand(fan);
 
-        remoteControl.setCommand(lightOnCommand);
-        remoteControl.pressButton();
+        control.setCommand(highCommand);
+        control.pressExecuteButton();
 
-        remoteControl.setCommand(lightOffCommand);
-        remoteControl.pressButton();
+        control.setCommand(lowCommand);
+        control.pressExecuteButton();
+        control.pressUndoButton();
     }
 }
