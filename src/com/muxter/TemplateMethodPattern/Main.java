@@ -1,7 +1,5 @@
 package com.muxter.TemplateMethodPattern;
 
-import java.util.Arrays;
-
 /**
  * Created by matao on 09/02/2017.
  */
@@ -12,6 +10,5 @@ public class Main {
         System.out.println("-----------------------------------");
         beverage = new Tea();
         beverage.prepareRecipe();
-        Arrays.sort();
     }
 }
